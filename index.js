@@ -17,7 +17,8 @@ Do the following:
 
    HINT: no function required
 */
-
+var votingAge = 18
+console.log(votingAge >= 18)
 
 
 /*
@@ -30,8 +31,15 @@ Do the following:
 
    HINT: no function required
 */
+var varOne = 1;
+var varTwo = 2;
+if (varOne <= varTwo) {
+  varOne += varTwo;
+} else {
+  varOne = 0;
+}
 
-
+console.log(varOne)
 
 
 
@@ -45,7 +53,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+var strNum = "1999";
+strNum = parseInt(strNum);
+console.log(strNum);
 
 
 
@@ -58,8 +68,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
 
@@ -74,8 +84,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(dogsAge){
+    return dogsAge * 7
 }
 
 
@@ -107,10 +117,27 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(lbs, dogsAge){
+    if (dogsAge <= .33334) {
+      return lbs * .1
+    } else if (dogsAge <= 0.58) {
+      return lbs * .05
+    } else if (dogsAge <= .99999) {
+      return lbs * .04
+    } else {
+      if (lbs <= 5) {
+        return lbs * .05
+      } else if (lbs <= 10) {
+        return lbs * .04
+      } else if (lbs <= 15) {
+        return lbs * .03
+      } else {
+        return lbs * .02
+      }
+    }
   }
 
+  console.log(hungryDog(15, 1))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
